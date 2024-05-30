@@ -49,3 +49,39 @@
   border-radius: 0.25rem;
   background: var(--Gray-400, #333);
 }
+
+.item input[type="checkbox"] {
+  display: none;
+}
+
+.item input[type="checkbox"] + label {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  color: #393939;
+}
+
+.item input[type="checkbox"] + label:before {
+  content: "";
+
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid var(--blue);
+  background: transparent;
+  border-radius: 50%;
+  display: flex;
+}
+
+.item input[type="checkbox"]:checked + label:before {
+  content: "\2713";
+  background: var(
+    --purple-dark
+  ); /* Altera a cor de fundo quando o checkbox está marcado */
+  color: var(--gray-100); /* Altera a cor do check para branco */
+  border: none;
+  font-size: 0.7rem; /* Ajusta o tamanho da fonte */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
