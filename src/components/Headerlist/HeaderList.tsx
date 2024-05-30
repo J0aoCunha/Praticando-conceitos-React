@@ -1,3 +1,4 @@
+// styles
 import styles from "./HeaderList.module.css"
 
 interface HeaderListProps {

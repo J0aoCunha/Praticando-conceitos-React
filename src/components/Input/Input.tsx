@@ -1,4 +1,6 @@
+// generics
 import { DetailedHTMLProps, InputHTMLAttributes } from "react"
+// styles
 import styles from "./Input.module.css"
 
 export function Input({

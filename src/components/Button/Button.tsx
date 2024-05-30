@@ -1,5 +1,9 @@
+// generics
 import { ButtonHTMLAttributes, DetailedHTMLProps } from "react"
+
+//styles
 import styles from "./Button.module.css"
+
 type ButtonProps = DetailedHTMLProps<
   ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement

@@ -1,13 +1,17 @@
+import { useState } from "react"
+
+// components
 import { HeaderList } from "./components/HeaderList/HeaderList"
 import { Item } from "./components/Item/Item"
 import { Button } from "./components/Button/Button"
 import { Header } from "./components/Header/Header"
 import { Input } from "./components/Input/Input"
+
+//icons
 import { PlusCircle } from "@phosphor-icons/react"
-import { useState } from "react"
 
+//styles
 import styles from "./app.module.css"
-
 export interface ITask {
   id: number
   text: string
@@ -46,15 +50,19 @@ function App() {
 
   const completedTasks = task.filter((task) => task.isChecked).length
 
+  const handleDeleteTask = (id: number) => {
+    setTask(task.filter((task) => task.id !== id))
+  }
+
   return (
     <main>
       <Header />
       <section className={styles.container}>
         <div className={styles.taskInfoContainer}>
-          <Input onChange={handleTaskValue} value={inputValue} />
+          <Input onChange={handleTaskValue} value={inputValue} required />
           <Button onClick={handleCreateTask}>
             Criar
-            <PlusCircle size={20} weight="regular" />
+            <PlusCircle size={20} weight="bold" />
           </Button>
         </div>
         <div className={styles.tasksList}>
@@ -64,9 +72,10 @@ function App() {
           />
           {task.map((task) => (
             <Item
+              handleDeleteTask={handleDeleteTask}
               key={task.id}
               data={task}
-              handleCheckboxChange={() => handleCheckboxChange(task.id)}
+              handleCheckboxChange={handleCheckboxChange}
             />
           ))}
         </div>
