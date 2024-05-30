@@ -6,7 +6,10 @@ interface HeaderListProps {
   completedTasks: number
 }
 
-export function HeaderList({ completedTasks, createdTasks }: HeaderListProps) {
+export default function HeaderList({
+  completedTasks,
+  createdTasks,
+}: HeaderListProps) {
   return (
     <header className={styles.container}>
       <aside>
