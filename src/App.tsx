@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 // components
-import HeaderList from "./components/HeaderList"
+import HeaderList from "./components/HeaderList/HeaderList"
 import { Item } from "./components/Item/Item"
 import { Button } from "./components/Button/Button"
 import { Header } from "./components/Header/Header"
