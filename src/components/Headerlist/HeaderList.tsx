@@ -1,18 +1,25 @@
 import styles from "./HeaderList.module.css"
 
-export default function HeaderList() {
+interface HeaderListProps {
+  createdTasks: number
+  completedTasks: number
+}
+
+export function HeaderList({ completedTasks, createdTasks }: HeaderListProps) {
   return (
     <header className={styles.container}>
       <aside>
         <p>
           Tarefas Criadas
-          <span>7</span>
+          <span>{createdTasks}</span>
         </p>
       </aside>
       <aside>
         <p>
           concluídos
-          <span>5 de 7</span>
+          <span>
+            {completedTasks} de {createdTasks}
+          </span>
         </p>
       </aside>
     </header>
