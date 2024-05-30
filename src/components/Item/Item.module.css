@@ -1,0 +1,51 @@
+.item {
+  flex: 1;
+
+  padding: 1rem;
+  gap: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: var(--gray-500);
+  border: 1px solid var(--gray-400);
+}
+
+.item div {
+  display: flex;
+
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item p {
+  color: var(--Gray-100, #f2f2f2);
+  flex: 1;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+.item button {
+  display: flex;
+  width: 1.5rem;
+  height: 1.5rem;
+
+  background: transparent;
+
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 0.25rem;
+  border: none;
+  outline: none;
+}
+
+.item button svg {
+  color: var(--gray-300);
+}
+
+.item button svg:hover {
+  color: var(--danger);
+  border-radius: 0.25rem;
+  background: var(--Gray-400, #333);
+}
